@@ -866,25 +866,25 @@
 
                 <div class="col-lg-8">
 
-                    <form class="contact-form">
+                    <form id="contactForm" class="contact-form">
 
                         <div class="row g-3">
 
                             <div class="col-md-6">
-                                <input type="text" placeholder="Nombre completo" required>
+                                <input type="text" name="nombre" placeholder="Nombre completo" required>
                             </div>
 
                             <div class="col-md-6">
-                                <input type="email" placeholder="Correo electrónico" required>
+                                <input type="email" name="email" placeholder="Correo electrónico" required>
                             </div>
 
                             <div class="col-md-6">
-                                <input type="tel" placeholder="Teléfono">
+                                <input type="tel" name="telefono" placeholder="Teléfono">
                             </div>
 
                             <div class="col-md-6">
 
-                                <select required>
+                                <select name="servicio" required>
 
                                     <option value="">Selecciona un servicio</option>
                                     <option>Entrenamiento personalizado</option>
@@ -900,14 +900,17 @@
                             </div>
 
                             <div class="col-12">
-                                <textarea rows="6" placeholder="Cuéntame un poco sobre tu objetivo o proyecto..."
-                                    required></textarea>
+                                <textarea name="mensaje" rows="6"
+                                    placeholder="Cuéntame un poco sobre tu objetivo o proyecto..." required></textarea>
                             </div>
 
                             <div class="col-12 text-center">
-                                <button class="btn btn-danger btn-lg px-5">
+                                <button type="submit" class="btn btn-danger btn-lg px-5">
                                     Enviar solicitud
                                 </button>
+
+                                    <p id="formMessage" class="form-message"></p>
+
                             </div>
 
                         </div>
@@ -921,12 +924,6 @@
                             <a href="mailto:karolinaaparatufit@gmail.com">karolinaaparatufit@gmail.com</a>
                         </p>
 
-                        <!-- WhatsApp
-                        <p>
-                            <i class="bi bi-whatsapp"></i>
-                            <a href="https://wa.me/34654750512" target="_blank">+34 654 75 05 12</a>
-                        </p>
-                        -->
                     </div>
 
                 </div>
@@ -1001,7 +998,7 @@
                         <a href="https://wa.me/34654750512" target="_blank">+34 654 75 05 12</a>
                     </p>
                     -->
-                    
+
                 </div>
 
             </div>
@@ -1018,6 +1015,18 @@
 
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
 
     <!-- JS -->
     <script src="js/index.js"></script>
@@ -1036,7 +1045,6 @@
         class="whatsapp" target="_blank" aria-label="Contactar por WhatsApp">
         <i class="bi bi-whatsapp"></i>
     </a>
-
 
 </body>
 

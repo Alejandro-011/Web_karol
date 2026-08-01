@@ -856,35 +856,35 @@ footer a:hover {
 
 
 
-.social{
-    display:flex;
-    gap:16px;
-    justify-content:flex-start;
-    align-items:center;
-    margin-top:12px;
+.social {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 12px;
 }
 
-.social a{
-    width:56px;
-    height:56px;
-    border-radius:50%;
-    background:#141518;
-    border:1px solid rgba(255,255,255,.08);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#fff;
-    transition:.3s ease;
+.social a {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #141518;
+    border: 1px solid rgba(255, 255, 255, .08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: .3s ease;
 }
 
-.social a:hover{
-    background:#ff2d2d;
-    border-color:#ff2d2d;
-    transform:translateY(-3px);
+.social a:hover {
+    background: #ff2d2d;
+    border-color: #ff2d2d;
+    transform: translateY(-3px);
 }
 
-.social i{
-    font-size:1.5rem;
+.social i {
+    font-size: 1.5rem;
 }
 
 
@@ -1242,7 +1242,7 @@ footer hr {
 
 @media(max-width:768px) {
 
-      .gallery-img {
+    .gallery-img {
         height: 300px;
     }
 
@@ -1258,57 +1258,73 @@ footer hr {
         justify-content: center;
     }
 
-     
+
 }
 
 /*================ JS EFFECTS ================*/
 
-.nav-link.active{
-color:var(--accent) !important;
+.nav-link.active {
+    color: var(--accent) !important;
 }
 
-.nav-link.active::after{
-transform:scaleX(1);
+.nav-link.active::after {
+    transform: scaleX(1);
 }
 
-.hidden-card{
-opacity:0;
-transform:translateY(30px);
-transition:all .8s ease;
+.hidden-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all .8s ease;
 }
 
-.show{
-opacity:1;
-transform:translateY(0);
+.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.btn-danger{
-position:relative;
-overflow:hidden;
+.btn-danger {
+    position: relative;
+    overflow: hidden;
 }
 
-.btn-danger::before{
-content:"";
-position:absolute;
-width:220px;
-height:220px;
-background:radial-gradient(circle, rgba(255,255,255,.22), transparent 60%);
-top:var(--y);
-left:var(--x);
-transform:translate(-50%, -50%);
-opacity:0;
-transition:opacity .3s ease;
+.btn-danger::before {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle, rgba(255, 255, 255, .22), transparent 60%);
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity .3s ease;
 }
 
-.btn-danger:hover::before{
-opacity:1;
+.btn-danger:hover::before {
+    opacity: 1;
 }
 
-.gallery video{
-transition:transform .45s ease, box-shadow .45s ease;
+.gallery video {
+    transition: transform .45s ease, box-shadow .45s ease;
 }
 
-.gallery video:hover{
-transform:scale(1.03);
-box-shadow:0 22px 48px rgba(0,0,0,.35);
+.gallery video:hover {
+    transform: scale(1.03);
+    box-shadow: 0 22px 48px rgba(0, 0, 0, .35);
+}
+
+.form-message{
+    margin-top:15px;
+    font-weight:600;
+    display:none;
+}
+
+.form-message.success{
+    display:block;
+    color:#4ade80;
+}
+
+.form-message.error{
+    display:block;
+    color:#ff6b6b;
 }
