@@ -27,6 +27,19 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/index.css">
 
+    <!-- Google Translate -->
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'es',
+                includedLanguages: 'es,en,fr,it,de,pt',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </head>
 
 <body>
@@ -50,31 +63,38 @@
                 <ul class="navbar-nav ms-auto">
 
                     <li class="nav-item">
-                        <a href="#inicio" class="nav-link">Inicio</a>
+                        <a href="#inicio" class="nav-link" data-i18n="nav_home">Inicio</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="#sobre" class="nav-link">Sobre mí</a>
+                        <a href="#sobre" class="nav-link" data-i18n="nav_about">Sobre mí</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="#objetivos" class="nav-link">Objetivos</a>
+                        <a href="#objetivos" class="nav-link" data-i18n="nav_goals">Objetivos</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="#servicios" class="nav-link">Servicios</a>
+                        <a href="#servicios" class="nav-link" data-i18n="nav_services">Servicios</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="#partners" class="nav-link">Partners</a>
+                        <a href="#partners" class="nav-link" data-i18n="nav_partners">Partners</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="#galeria" class="nav-link">Galería</a>
+                        <a href="#galeria" class="nav-link" data-i18n="nav_gallery">Galería</a>
+                    </li>
+
+                    <li class="nav-item ms-lg-3 d-flex align-items-center">
+                        <select id="languageSwitcher" class="language-select">
+                            <option value="es">ES</option>
+                            <option value="en">EN</option>
+                        </select>
                     </li>
 
                     <li class="nav-item">
-                        <a href="#contacto" class="btn btn-danger ms-lg-3">
+                        <a href="#contacto" class="btn btn-danger ms-lg-3" data-i18n="nav_contact">
                             Contactar
                         </a>
                     </li>
@@ -103,17 +123,17 @@
 
                 <div class="col-lg-7">
 
-                    <span class="hero-subtitle">
+                    <span class="hero-subtitle" data-i18n="hero_subtitle">
                         ENTRENADORA · CREADORA DE CONTENIDO · ATLETA PATROCINADA
                     </span>
 
-                    <h1>
+                    <h1 data-i18n="hero_title">
                         Transforma tu físico
                         y construye
                         tu marca personal.
                     </h1>
 
-                    <p>
+                    <p data-i18n="hero_text">
                         Entrenamiento personalizado, creación de contenido, edición de vídeo,
                         asesoramiento para redes sociales y acompañamiento completo para ayudarte
                         a crecer tanto dentro como fuera del gimnasio.
@@ -121,11 +141,11 @@
 
                     <div class="hero-buttons">
 
-                        <a href="#contacto" class="btn btn-danger btn-lg">
+                        <a href="#contacto" class="btn btn-danger btn-lg" data-i18n="hero_btn1">
                             Empezar ahora
                         </a>
 
-                        <a href="#galeria" class="btn btn-outline-light btn-lg">
+                        <a href="#galeria" class="btn btn-outline-light btn-lg" data-i18n="hero_btn2">
                             Ver mis trabajos
                         </a>
 
@@ -155,7 +175,7 @@
                     <div class="stat-card">
                         <i class="bi bi-people-fill"></i>
                         <h2 class="counter" data-target="300">0</h2>
-                        <p>Clientes</p>
+                        <p data-i18n="stats_clients">Clientes</p>
                     </div>
                 </div>
 
@@ -163,7 +183,7 @@
                     <div class="stat-card">
                         <i class="bi bi-camera-reels-fill"></i>
                         <h2 class="counter" data-target="500">0</h2>
-                        <p>Transformaciones</p>
+                        <p data-i18n="stats_transformations">Transformaciones</p>
                     </div>
                 </div>
 
@@ -171,7 +191,7 @@
                     <div class="stat-card">
                         <i class="bi bi-star-fill"></i>
                         <h2 class="counter" data-target="2">0</h2>
-                        <p>Años de experiencia</p>
+                        <p data-i18n="stats_years">Años de experiencia</p>
                     </div>
                 </div>
 
@@ -179,7 +199,7 @@
                     <div class="stat-card">
                         <i class="bi bi-heart-fill"></i>
                         <h2 class="counter" data-target="95">0</h2>
-                        <p>Satisfacción</p>
+                        <p data-i18n="stats_satisfaction">Satisfacción</p>
                     </div>
                 </div>
 
@@ -209,21 +229,21 @@
 
                 <div class="col-lg-6">
 
-                    <span class="section-subtitle">
+                    <span class="section-subtitle" data-i18n="about_sub">
                         SOBRE MÍ
                     </span>
 
-                    <h2>
+                    <h2 data-i18n="about_title">
                         Mucho más que una entrenadora.
                     </h2>
 
-                    <p>
+                    <p data-i18n="about_text1">
                         Soy Karol, entrenadora personal, creadora de contenido fitness y atleta patrocinada.
                         Mi objetivo es ayudarte a transformar tu físico mientras desarrollamos una imagen
                         profesional y auténtica tanto dentro como fuera del gimnasio.
                     </p>
 
-                    <p>
+                    <p data-i18n="about_text2">
                         Trabajo con personas que quieren aprender a entrenar correctamente, mejorar su
                         rendimiento, resolver dudas sobre suplementación, crear contenido para redes
                         sociales y construir una marca personal con proyección.
@@ -233,27 +253,27 @@
 
                         <div>
                             <i class="bi bi-check-circle-fill"></i>
-                            Entrenamiento personalizado
+                            <span data-i18n="about_feature1">Entrenamiento personalizado</span>
                         </div>
 
                         <div>
                             <i class="bi bi-check-circle-fill"></i>
-                            Seguimiento semanal
+                            <span data-i18n="about_feature2">Seguimiento semanal</span>
                         </div>
 
                         <div>
                             <i class="bi bi-check-circle-fill"></i>
-                            Asesoramiento en suplementación
+                            <span data-i18n="about_feature3">Asesoramiento en suplementación</span>
                         </div>
 
                         <div>
                             <i class="bi bi-check-circle-fill"></i>
-                            Creación de contenido y redes sociales
+                            <span data-i18n="about_feature4">Creación de contenido y redes sociales</span>
                         </div>
 
                     </div>
 
-                    <a href="#servicios" class="btn btn-danger mt-4">
+                    <a href="#servicios" class="btn btn-danger mt-4" data-i18n="about_btn">
                         Descubrir servicios
                     </a>
 
@@ -273,15 +293,15 @@
 
             <div class="text-center mb-5">
 
-                <span class="section-subtitle">
+                <span class="section-subtitle" data-i18n="goals_sub">
                     OBJETIVOS
                 </span>
 
-                <h2>
+                <h2 data-i18n="goals_title">
                     Todo lo que puedo ayudarte a conseguir
                 </h2>
 
-                <p class="section-text">
+                <p class="section-text" data-i18n="goals_text">
                     Trabajo de forma personalizada para ayudarte tanto en tu progreso físico
                     como en tu imagen y presencia en redes sociales.
                 </p>
@@ -296,9 +316,9 @@
 
                         <i class="bi bi-lightning-charge-fill"></i>
 
-                        <h4>Entrenamiento personalizado</h4>
+                        <h4 data-i18n="goals_titulo3">Entrenamiento personalizado</h4>
 
-                        <p>
+                        <p data-i18n="goals_texto3">
                             Rutinas adaptadas a tu nivel, objetivos y disponibilidad para
                             conseguir resultados reales y sostenibles.
                         </p>
@@ -313,9 +333,9 @@
 
                         <i class="bi bi-clipboard2-pulse"></i>
 
-                        <h4>Seguimiento y asesoramiento</h4>
+                        <h4 data-i18n="goals_titulo4">Seguimiento y asesoramiento</h4>
 
-                        <p>
+                        <p data-i18n="goals_texto4">
                             Resuelvo tus dudas, ajusto tus entrenamientos y te acompaño
                             durante todo el proceso para que no entrenes solo/a.
                         </p>
@@ -330,9 +350,9 @@
 
                         <i class="bi bi-capsule-pill"></i>
 
-                        <h4>Dudas sobre suplementación</h4>
+                        <h4 data-i18n="goals_titulo5">Dudas sobre suplementación</h4>
 
-                        <p>
+                        <p data-i18n="goals_texto5">
                             Te oriento sobre el uso responsable de suplementos deportivos
                             y cómo integrarlos en tu planificación.
                         </p>
@@ -347,9 +367,9 @@
 
                         <i class="bi bi-camera-video-fill"></i>
 
-                        <h4>Edición de vídeo</h4>
+                        <h4 data-i18n="goals_titulo6">Edición de vídeo</h4>
 
-                        <p>
+                        <p data-i18n="goals_texto6">
                             Edición profesional de vídeos para redes sociales, marcas,
                             promociones y contenido fitness de alto impacto.
                         </p>
@@ -364,7 +384,7 @@
 
                         <i class="bi bi-instagram"></i>
 
-                        <h4>Redes sociales y contenido</h4>
+                        <h4 data-i18n="goals_titulo7">Redes sociales y contenido</h4>
 
                         <p>
                             Te ayudo a crear contenido atractivo y mejorar tu presencia
@@ -381,7 +401,7 @@
 
                         <i class="bi bi-stars"></i>
 
-                        <h4>Marca personal</h4>
+                        <h4 data-i18n="goals_titulo8">Marca personal</h4>
 
                         <p>
                             Desarrolla una imagen profesional para colaborar con marcas,
@@ -406,15 +426,15 @@
 
             <div class="text-center mb-5">
 
-                <span class="section-subtitle">
+                <span class="section-subtitle" data-i18n="services_sub">
                     SERVICIOS
                 </span>
 
-                <h2>
+                <h2 data-i18n="services_title">
                     Servicios diseñados para transformar tu físico y tu imagen
                 </h2>
 
-                <p class="section-text">
+                <p class="section-text" data-i18n="services_text">
                     Entrenamiento, asesoramiento, creación de contenido y colaboraciones
                     para ayudarte a crecer tanto a nivel físico como profesional.
                 </p>
@@ -429,9 +449,9 @@
 
                         <i class="bi bi-person-workspace"></i>
 
-                        <h4>Entrenamiento Personal</h4>
+                        <h4 data-i18n="services_titulo1">Entrenamiento Personal</h4>
 
-                        <p>
+                        <p data-i18n="services_texto1">
                             Planes completamente personalizados con seguimiento continuo,
                             adaptados a tus objetivos y nivel.
                         </p>
@@ -446,9 +466,9 @@
 
                         <i class="bi bi-camera-video-fill"></i>
 
-                        <h4>Edición de Vídeo</h4>
+                        <h4 data-i18n="services_titulo2">Edición de Vídeo</h4>
 
-                        <p>
+                        <p data-i18n="services_texto2">
                             Reels, TikToks, Shorts y contenido profesional para redes
                             sociales, marcas y proyectos personales.
                         </p>
@@ -463,9 +483,9 @@
 
                         <i class="bi bi-camera-fill"></i>
 
-                        <h4>Sesiones Fotográficas</h4>
+                        <h4 data-i18n="services_titulo3">Sesiones Fotográficas</h4>
 
-                        <p>
+                        <p data-i18n="services_texto3">
                             Fotografía fitness profesional para redes sociales, portfolios,
                             campañas y colaboraciones con marcas.
                         </p>
@@ -480,9 +500,9 @@
 
                         <i class="bi bi-instagram"></i>
 
-                        <h4>Redes Sociales</h4>
+                        <h4 data-i18n="services_titulo4">Redes Sociales</h4>
 
-                        <p>
+                        <p data-i18n="services_texto4">
                             Estrategia, imagen, contenido y crecimiento para potenciar tu
                             presencia en Instagram y TikTok.
                         </p>
@@ -497,9 +517,9 @@
 
                         <i class="bi bi-capsule-pill"></i>
 
-                        <h4>Asesoramiento en Suplementación</h4>
+                        <h4 data-i18n="services_titulo5">Asesoramiento en Suplementación</h4>
 
-                        <p>
+                        <p data-i18n="services_texto5">
                             Orientación personalizada para elegir suplementos de forma
                             responsable según tus objetivos.
                         </p>
@@ -514,9 +534,9 @@
 
                         <i class="bi bi-chat-dots-fill"></i>
 
-                        <h4>Seguimiento Online</h4>
+                        <h4 data-i18n="services_titulo6">Seguimiento Online</h4>
 
-                        <p>
+                        <p data-i18n="services_texto6">
                             Comunicación directa para resolver dudas, ajustar entrenamientos
                             y mantener el progreso constante.
                         </p>
@@ -531,9 +551,9 @@
 
                         <i class="bi bi-award-fill"></i>
 
-                        <h4>Colaboraciones con Marcas</h4>
+                        <h4 data-i18n="services_titulo7">Colaboraciones con Marcas</h4>
 
-                        <p>
+                        <p data-i18n="services_texto7">
                             Creación de contenido promocional, campañas y acciones para
                             empresas del sector fitness y bienestar.
                         </p>
@@ -548,9 +568,9 @@
 
                         <i class="bi bi-stars"></i>
 
-                        <h4>Marca Personal</h4>
+                        <h4 data-i18n="services_titulo8">Marca Personal</h4>
 
-                        <p>
+                        <p data-i18n="services_texto8">
                             Construye una imagen profesional para atraer clientes, colaborar
                             con marcas y crecer como creador de contenido.
                         </p>
@@ -577,11 +597,11 @@
                     PARTNERS
                 </span>
 
-                <h2>
+                <h2 data-i18n="partners_title">
                     Marcas con las que colaboro
                 </h2>
 
-                <p class="section-text">
+                <p class="section-text" data-i18n="partners_text">
                     Como atleta patrocinada, trabajo junto a marcas reconocidas del sector
                     fitness y bienestar para ofrecer productos de calidad y contenido
                     profesional.
@@ -599,7 +619,7 @@
 
                         <h4>BiotechUSA</h4>
 
-                        <p>
+                        <p data-i18n="partners_text1">
                             Suplementación deportiva, nutrición avanzada y productos
                             orientados al rendimiento físico y la salud.
                         </p>
@@ -616,7 +636,7 @@
 
                         <h4>Jourcelf</h4>
 
-                        <p>
+                        <p data-i18n="partners_text2">
                             Colaboración enfocada en bienestar, salud y mejora del
                             rendimiento a través de productos y contenido especializado.
                         </p>
@@ -639,15 +659,15 @@
 
             <div class="text-center mb-5">
 
-                <span class="section-subtitle">
+                <span class="section-subtitle" data-i18n="gallery_sub">
                     GALERÍA
                 </span>
 
-                <h2>
+                <h2 data-i18n="gallery_title">
                     Entrenamientos, contenido y colaboraciones
                 </h2>
 
-                <p class="section-text">
+                <p class="section-text" data-i18n="gallery_text">
                     Una muestra de algunos de los trabajos realizados para redes sociales,
                     marcas y clientes.
                 </p>
@@ -718,15 +738,15 @@
 
             <div class="text-center mb-5">
 
-                <span class="section-subtitle">
+                <span class="section-subtitle" data-i18n="testimonials_sub">
                     OPINIONES
                 </span>
 
-                <h2>
+                <h2 data-i18n="testimonials_title">
                     Lo que dicen quienes han trabajado conmigo
                 </h2>
 
-                <p class="section-text">
+                <p class="section-text" data-i18n="testimonials_text">
                     Resultados reales, seguimiento cercano y una forma de trabajar basada en la confianza y la
                     constancia.
                 </p>
@@ -747,13 +767,13 @@
                             <i class="bi bi-star-fill"></i>
                         </div>
 
-                        <p>
+                        <p data-i18n="testimonial1">
                             “Nunca había seguido un plan tan personalizado. En pocos meses mejoré mi físico y aprendí a
                             entrenar correctamente.”
                         </p>
 
                         <h5>Laura M.</h5>
-                        <span>Entrenamiento Online</span>
+                        <span data-i18n="testimonial1_position">Entrenamiento Online</span>
 
                     </div>
 
@@ -771,13 +791,13 @@
                             <i class="bi bi-star-fill"></i>
                         </div>
 
-                        <p>
+                        <p data-i18n="testimonial2">
                             “Me ayudó con el contenido para redes y la edición de vídeos. La diferencia en mi perfil fue
                             enorme.”
                         </p>
 
                         <h5>Andrea G.</h5>
-                        <span>Creadora de contenido</span>
+                        <span data-i18n="testimonial2_position">Creadora de contenido</span>
 
                     </div>
 
@@ -795,13 +815,13 @@
                             <i class="bi bi-star-fill"></i>
                         </div>
 
-                        <p>
+                        <p data-i18n="testimonial3">
                             “Atención rápida, seguimiento constante y asesoramiento muy claro sobre entrenamiento y
                             suplementación.”
                         </p>
 
                         <h5>David R.</h5>
-                        <span>Asesoría Personalizada</span>
+                        <span data-i18n="testimonial3_position">Asesoría Personalizada</span>
 
                     </div>
 
@@ -819,21 +839,21 @@
 
         <div class="container text-center">
 
-            <span class="section-subtitle">
+            <span class="section-subtitle" data-i18n="cta_sub">
                 EMPIEZA HOY
             </span>
 
-            <h2>
+            <h2 data-i18n="cta_title">
                 Tu transformación empieza con un solo mensaje
             </h2>
 
-            <p>
+            <p data-i18n="cta_text">
                 Si quieres mejorar tu físico, crear contenido profesional o hacer crecer tu marca personal,
                 estaré encantada de ayudarte.
             </p>
 
-            <a href="#contacto" class="btn btn-light btn-lg">
-                Hablar por WhatsApp
+            <a href="#contacto" class="btn btn-light btn-lg" data-i18n="cta_button">
+                Contáctame ahora
             </a>
 
         </div>
@@ -848,15 +868,15 @@
 
             <div class="text-center mb-5">
 
-                <span class="section-subtitle">
+                <span class="section-subtitle" data-i18n="contact_sub">
                     CONTACTO
                 </span>
 
-                <h2>
+                <h2 data-i18n="contact_title">
                     Cuéntame cuál es tu objetivo
                 </h2>
 
-                <p class="section-text">
+                <p class="section-text" data-i18n="contact_text">
                     Rellena el formulario y me pondré en contacto contigo lo antes posible.
                 </p>
 
@@ -871,15 +891,15 @@
                         <div class="row g-3">
 
                             <div class="col-md-6">
-                                <input type="text" name="nombre" placeholder="Nombre completo" required>
+                                <input type="text" name="nombre" placeholder="Nombre completo" data-i18n-placeholder="contact_name" required>
                             </div>
 
                             <div class="col-md-6">
-                                <input type="email" name="email" placeholder="Correo electrónico" required>
+                                <input type="email" name="email" placeholder="Correo electrónico" data-i18n-placeholder="contact_email" required>
                             </div>
 
                             <div class="col-md-6">
-                                <input type="tel" name="telefono" placeholder="Teléfono">
+                                <input type="tel" name="telefono" placeholder="Teléfono" data-i18n-placeholder="contact_phone" required>
                             </div>
 
                             <div class="col-md-6">
@@ -901,15 +921,15 @@
 
                             <div class="col-12">
                                 <textarea name="mensaje" rows="6"
-                                    placeholder="Cuéntame un poco sobre tu objetivo o proyecto..." required></textarea>
+                                    placeholder="Cuéntame un poco sobre tu objetivo o proyecto..." required data-i18n-placeholder="contact_message"></textarea>
                             </div>
 
                             <div class="col-12 text-center">
-                                <button type="submit" class="btn btn-danger btn-lg px-5">
+                                <button type="submit" class="btn btn-danger btn-lg px-5" data-i18n="send">
                                     Enviar solicitud
                                 </button>
 
-                                    <p id="formMessage" class="form-message"></p>
+                                <p id="formMessage" class="form-message"></p>
 
                             </div>
 
@@ -948,7 +968,7 @@
                         FitKarol<span>Performance</span>
                     </h3>
 
-                    <p>
+                    <p data-i18n="footer_text">
                         Entrenadora personal, creadora de contenido y atleta patrocinada.
                         Ayudando a transformar físicos, potenciar marcas personales y crear contenido de alto nivel.
                     </p>
@@ -957,21 +977,21 @@
 
                 <div class="col-lg-4">
 
-                    <h5>Navegación</h5>
+                    <h5 data-i18n="footer_navigation">Navegación</h5>
 
-                    <a href="#inicio">Inicio</a>
-                    <a href="#sobre">Sobre mí</a>
-                    <a href="#objetivos">Objetivos</a>
-                    <a href="#servicios">Servicios</a>
-                    <a href="#partners">Partners</a>
-                    <a href="#galeria">Galería</a>
-                    <a href="#contacto">Contacto</a>
+                    <a href="#inicio" data-i18n="footer_home">Inicio</a>
+                    <a href="#sobre" data-i18n="footer_about">Sobre mí</a>
+                    <a href="#objetivos" data-i18n="footer_goals">Objetivos</a>
+                    <a href="#servicios" data-i18n="footer_services">Servicios</a>
+                    <a href="#partners" data-i18n="footer_partners">Partners</a>
+                    <a href="#galeria" data-i18n="footer_gallery">Galería</a>
+                    <a href="#contacto" data-i18n="footer_contact">Contacto</a>
 
                 </div>
 
                 <div class="col-lg-4">
 
-                    <h5>Sígueme</h5>
+                    <h5 data-i18n="footer_follow">Sígueme</h5>
 
                     <div class="social">
 
@@ -985,7 +1005,7 @@
 
                     </div>
 
-                    <h5 class="mt-4">Contacto</h5>
+                    <h5 class="mt-4" data-i18n="footer_contact_info">Contacto</h5>
 
                     <p>
                         <i class="bi bi-envelope-fill"></i>
@@ -1005,7 +1025,7 @@
 
             <hr>
 
-            <p class="copyright">
+            <p class="copyright" data-i18n="footer_copyright">
                 © 2026 FitKarol Performance. Todos los derechos reservados.
             </p>
 
@@ -1043,7 +1063,7 @@
     <!--    
 
     Botón flotante de WhatsApp
-    
+
     <a href="https://wa.me/34654750512?text=¡Hola!%20He%20visitado%20tu%20web%20y%20me%20gustaría%20recibir%20más%20información%20sobre%20tus%20servicios."
         class="whatsapp" target="_blank" aria-label="Contactar por WhatsApp">
         <i class="bi bi-whatsapp"></i>
