@@ -265,7 +265,7 @@ const translations = {
 
 
         stats_clients: "Clientes",
-        stats_transformations: "Transformaciones",
+        stats_transformations: "Colaboraciones",
         stats_years: "Años de experiencia",
         stats_satisfaction: "Satisfacción",
 
