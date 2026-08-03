@@ -365,7 +365,7 @@ const translations = {
         footer_contact: "Contacto",
         footer_follow: "Sígueme",
         footer_contact_info: "Contacto",
-        footer_copyright: "© 2026 FitKarol Performance. Todos los derechos reservados."
+        footer_copyright: "© 2026 Karol Performance. Todos los derechos reservados."
 
     },
 
@@ -488,7 +488,7 @@ const translations = {
         footer_contact: "Contact",
         footer_follow: "Follow me",
         footer_contact_info: "Contact",
-        footer_copyright: "© 2026 FitKarol Performance. All rights reserved."
+        footer_copyright: "© 2026 Karol Performance. All rights reserved."
 
     }
 };
