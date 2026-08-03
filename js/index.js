@@ -384,7 +384,7 @@ const translations = {
         hero_btn2: "View my work",
 
         stats_clients: "Clients",
-        stats_transformations: "Transformations",
+        stats_transformations: "Collaborations",
         stats_years: "Years of experience",
         stats_satisfaction: "Satisfaction",
 
