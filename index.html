@@ -1088,26 +1088,26 @@
     </a>
     -->
 
-    <!-- ================= RESEÑAS ================= -->
+    <!-- ================= RESEÑA FLOTANTE ================= -->
 
-    <button class="review-btn" id="openReview" aria-label="Dejar una reseña">
+    <button id="reviewFloatingBtn" class="review-floating-btn" aria-label="Dejar una reseña">
         <i class="bi bi-star-fill"></i>
-        <span>Reseña</span>
     </button>
 
-    <div class="review-modal" id="reviewModal">
-        <div class="review-content">
+    <div id="reviewPopup" class="review-popup">
+        <div class="review-popup-content">
 
-            <button class="review-close" id="closeReview">
+            <button id="closeReviewPopup" class="review-popup-close">
                 <i class="bi bi-x-lg"></i>
             </button>
 
             <h3>¿Te ha gustado mi trabajo?</h3>
+
             <p>Escanea el QR o pulsa el botón para dejar una reseña en Google.</p>
 
-            <img src="img/resena.png" alt="QR para dejar una reseña" class="review-qr">
+            <img src="img/resena.png" alt="QR para dejar una reseña" class="review-popup-qr">
 
-            <a href="https://g.page/r/CZL4jLP956QpEBM/review" target="_blank" class="btn btn-danger mt-3">
+            <a href="https://g.page/r/CZL4jLP956QpEBM/review" target="_blank" class="btn btn-danger">
                 Dejar una reseña
             </a>
 
@@ -1115,21 +1115,21 @@
     </div>
 
     <script>
-        const reviewModal = document.getElementById('reviewModal');
-        const openReview = document.getElementById('openReview');
-        const closeReview = document.getElementById('closeReview');
+        const reviewFloatingBtn = document.getElementById('reviewFloatingBtn');
+        const reviewPopup = document.getElementById('reviewPopup');
+        const closeReviewPopup = document.getElementById('closeReviewPopup');
 
-        openReview.addEventListener('click', () => {
-            reviewModal.classList.add('show');
+        reviewFloatingBtn.addEventListener('click', () => {
+            reviewPopup.classList.add('active');
         });
 
-        closeReview.addEventListener('click', () => {
-            reviewModal.classList.remove('show');
+        closeReviewPopup.addEventListener('click', () => {
+            reviewPopup.classList.remove('active');
         });
 
-        reviewModal.addEventListener('click', (e) => {
-            if (e.target === reviewModal) {
-                reviewModal.classList.remove('show');
+        reviewPopup.addEventListener('click', (e) => {
+            if (e.target === reviewPopup) {
+                reviewPopup.classList.remove('active');
             }
         });
     </script>
