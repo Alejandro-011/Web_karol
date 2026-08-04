@@ -1088,6 +1088,52 @@
     </a>
     -->
 
+    <!-- ================= RESEÑAS ================= -->
+
+    <button class="review-btn" id="openReview" aria-label="Dejar una reseña">
+        <i class="bi bi-star-fill"></i>
+        <span>Reseña</span>
+    </button>
+
+    <div class="review-modal" id="reviewModal">
+        <div class="review-content">
+
+            <button class="review-close" id="closeReview">
+                <i class="bi bi-x-lg"></i>
+            </button>
+
+            <h3>¿Te ha gustado mi trabajo?</h3>
+            <p>Escanea el QR o pulsa el botón para dejar una reseña en Google.</p>
+
+            <img src="img/resena.png" alt="QR para dejar una reseña" class="review-qr">
+
+            <a href="https://g.page/r/CZL4jLP956QpEBM/review" target="_blank" class="btn btn-danger mt-3">
+                Dejar una reseña
+            </a>
+
+        </div>
+    </div>
+
+    <script>
+        const reviewModal = document.getElementById('reviewModal');
+        const openReview = document.getElementById('openReview');
+        const closeReview = document.getElementById('closeReview');
+
+        openReview.addEventListener('click', () => {
+            reviewModal.classList.add('show');
+        });
+
+        closeReview.addEventListener('click', () => {
+            reviewModal.classList.remove('show');
+        });
+
+        reviewModal.addEventListener('click', (e) => {
+            if (e.target === reviewModal) {
+                reviewModal.classList.remove('show');
+            }
+        });
+    </script>
+
 </body>
 
 </html>
