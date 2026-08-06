@@ -27,6 +27,7 @@ body {
     color: var(--text);
     overflow-x: hidden;
     line-height: 1.7;
+    min-width: 1200px;
 }
 
 img,
