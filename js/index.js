@@ -98,7 +98,7 @@ const heroVideo = document.querySelector('.hero-video');
 window.addEventListener('scroll', () => {
     if (heroVideo) {
         const offset = window.scrollY * 0.25;
-        heroVideo.style.transform = `scale(1.05) translateY(${offset}px)`;
+        heroVideo.style.transform = `translateY(${offset}px)`;
     }
 });
 
