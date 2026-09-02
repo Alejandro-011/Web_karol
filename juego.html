@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Deadlift Challenge | KarolPerformance</title>
+
+    <link rel="stylesheet" href="css/juego.css">
+    <script src="js/juego.js" defer></script>
+</head>
+
+<body>
+
+    <main id="game" class="game">
+
+        <!-- =========================
+             FONDO / CANVAS
+        ========================== -->
+
+        <div class="game-background"></div>
+
+        <canvas id="gameCanvas"></canvas>
+
+        <!-- =========================
+             CABECERA
+        ========================== -->
+
+        <header class="game-header">
+
+            <button
+                id="backButton"
+                class="icon-button back-button"
+                type="button"
+                aria-label="Volver"
+            >
+                <span>←</span>
+            </button>
+
+            <div class="brand">
+                <span class="brand-main">KAROL</span>
+                <span class="brand-sub">PERFORMANCE</span>
+            </div>
+
+            <div class="header-spacer"></div>
+
+        </header>
+
+
+        <!-- =========================
+             HUD
+        ========================== -->
+
+        <section id="hud" class="hud">
+
+            <div class="hud-item hud-weight">
+
+                <span class="hud-label">PESO</span>
+
+                <div class="weight-value">
+                    <span id="weightValue">0</span>
+                    <span class="weight-unit">KG</span>
+                </div>
+
+            </div>
+
+
+            <div class="hud-center">
+
+                <div class="timer-wrapper">
+
+                    <span class="hud-label">TIEMPO</span>
+
+                    <span id="timerValue" class="timer-value">
+                        15
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="hud-item hud-record">
+
+                <span class="hud-label">RÉCORD</span>
+
+                <div class="record-value">
+                    <span id="recordValue">0</span>
+                    <span class="weight-unit">KG</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             BARRA DE TIEMPO
+        ========================== -->
+
+        <div class="time-progress">
+
+            <div
+                id="timeProgressBar"
+                class="time-progress-bar"
+            ></div>
+
+        </div>
+
+
+        <!-- =========================
+             CONTADOR DE REPETICIONES
+        ========================== -->
+
+        <div id="repCounter" class="rep-counter">
+
+            <span id="repValue">0</span>
+
+            <span class="rep-label">
+                REPETICIONES
+            </span>
+
+        </div>
+
+
+        <!-- =========================
+             ZONA DE JUEGO
+        ========================== -->
+
+        <section
+            id="gameStage"
+            class="game-stage"
+            aria-label="Zona de juego"
+        >
+
+            <!--
+                Canvas ocupa visualmente esta zona.
+                El personaje, barra, discos y efectos
+                serán dibujados mediante JavaScript.
+            -->
+
+        </section>
+
+
+        <!-- =========================
+             BOTÓN DE LEVANTAR
+        ========================== -->
+
+        <button
+            id="liftButton"
+            class="lift-button"
+            type="button"
+        >
+
+            <span class="lift-button-top">
+                LEVANTA
+            </span>
+
+            <span class="lift-button-main">
+                ↑
+            </span>
+
+            <span class="lift-button-bottom">
+                CLICK / SPACE
+            </span>
+
+        </button>
+
+
+        <!-- =========================
+             PANTALLA INICIAL
+        ========================== -->
+
+        <section
+            id="startScreen"
+            class="overlay-screen start-screen"
+        >
+
+            <div class="overlay-content">
+
+                <div class="eyebrow">
+                    KAROL PERFORMANCE
+                </div>
+
+                <h1>
+                    DEADLIFT
+                    <span>CHALLENGE</span>
+                </h1>
+
+                <p class="game-description">
+                    Levanta todo el peso que puedas
+                    antes de que se acabe el tiempo.
+                </p>
+
+                <div class="game-rules">
+
+                    <div class="rule">
+                        <strong>15</strong>
+                        <span>SEGUNDOS</span>
+                    </div>
+
+                    <div class="rule-divider"></div>
+
+                    <div class="rule">
+                        <strong>+2 KG</strong>
+                        <span>POR REP</span>
+                    </div>
+
+                </div>
+
+                <button
+                    id="startButton"
+                    class="primary-button"
+                    type="button"
+                >
+                    <span>EMPEZAR</span>
+                    <span class="button-arrow">→</span>
+                </button>
+
+                <div class="controls-hint">
+                    CLICK / TAP / SPACE
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PANTALLA DE RESULTADO
+        ========================== -->
+
+        <section
+            id="resultScreen"
+            class="overlay-screen result-screen"
+            hidden
+        >
+
+            <div class="overlay-content">
+
+                <div class="eyebrow">
+                    TIEMPO AGOTADO
+                </div>
+
+                <h2>
+                    ENTRENAMIENTO
+                    <span>COMPLETADO</span>
+                </h2>
+
+
+                <div class="result-main">
+
+                    <span class="result-label">
+                        PESO LEVANTADO
+                    </span>
+
+                    <div class="result-weight">
+
+                        <span id="resultWeight">
+                            0
+                        </span>
+
+                        <span>KG</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="result-stats">
+
+                    <div class="result-stat">
+
+                        <span class="stat-value" id="resultReps">
+                            0
+                        </span>
+
+                        <span class="stat-label">
+                            REPETICIONES
+                        </span>
+
+                    </div>
+
+
+                    <div class="result-stat">
+
+                        <span class="stat-value" id="resultRecord">
+                            0
+                        </span>
+
+                        <span class="stat-label">
+                            RÉCORD
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="newRecordMessage"
+                    class="new-record-message"
+                    hidden
+                >
+                    🏆 NUEVO RÉCORD
+                </div>
+
+
+                <button
+                    id="restartButton"
+                    class="primary-button"
+                    type="button"
+                >
+
+                    <span>
+                        VOLVER A JUGAR
+                    </span>
+
+                    <span class="button-arrow">
+                        ↻
+                    </span>
+
+                </button>
+
+
+                <button
+                    id="resultBackButton"
+                    class="secondary-button"
+                    type="button"
+                >
+                    VOLVER
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FEEDBACK VISUAL
+        ========================== -->
+
+        <div
+            id="repFlash"
+            class="rep-flash"
+            aria-hidden="true"
+        ></div>
+
+
+        <div
+            id="statusMessage"
+            class="status-message"
+            aria-live="polite"
+        ></div>
+
+
+        <!-- =========================
+             ESQUINAS DECORATIVAS
+        ========================== -->
+
+        <div class="corner corner-top-left"></div>
+        <div class="corner corner-top-right"></div>
+        <div class="corner corner-bottom-left"></div>
+        <div class="corner corner-bottom-right"></div>
+
+
+        <!-- =========================
+             FOOTER
+        ========================== -->
+
+        <footer class="game-footer">
+
+            <span>
+                KAROLPERFORMANCE.COM
+            </span>
+
+            <span class="footer-separator">
+                /
+            </span>
+
+            <span>
+                DEADLIFT CHALLENGE
+            </span>
+
+        </footer>
+
+    </main>
+
+</body>
+</html>

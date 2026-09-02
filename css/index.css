@@ -1385,3 +1385,75 @@ footer hr {
         font-size: 1.5rem;
     }
 }
+
+/* ================= BOTÓN JUEGA YA ================= */
+
+.game-floating-btn {
+    position: fixed;
+    left: 85px;
+    bottom: 25px;
+
+    height: 56px;
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    background: #ff2b2b;
+    color: #ffffff;
+
+    border-radius: 30px;
+    border: none;
+
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+
+    box-shadow: 0 8px 25px rgba(255, 43, 43, 0.35);
+
+    cursor: pointer;
+
+    z-index: 9998;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.game-floating-btn i {
+    font-size: 20px;
+}
+
+.game-floating-btn:hover {
+    background: #ff4141;
+    color: #ffffff;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(255, 43, 43, 0.5);
+}
+
+.game-floating-btn:active {
+    transform: translateY(-1px);
+}
+
+/* ================= MÓVIL ================= */
+
+@media (max-width: 600px) {
+
+    .game-floating-btn {
+        left: 85px;
+        bottom: 18px;
+
+        height: 50px;
+        padding: 0 16px;
+
+        font-size: 13px;
+    }
+
+    .game-floating-btn i {
+        font-size: 18px;
+    }
+}
