@@ -250,6 +250,8 @@ if (contactForm) {
 
 const translations = {
     es: {
+        juega: "Juega ya",
+
         nav_home: "Inicio",
         nav_about: "Sobre mí",
         nav_goals: "Objetivos",
@@ -370,6 +372,8 @@ const translations = {
     },
 
     en: {
+        juega: "Play now",
+
         nav_home: "Home",
         nav_about: "About me",
         nav_goals: "Goals",
